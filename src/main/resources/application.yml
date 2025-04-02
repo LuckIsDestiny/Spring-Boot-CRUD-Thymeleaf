@@ -3,10 +3,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlserver://springboot-server.database.windows.net:1433;database=curd;user=admin@123@springboot-server;password=pass@word1;encrypt=true;trustServerCertificate=false;loginTimeout=30
+#    url: jdbc:sqlserver://springboot-server.database.windows.net:1433;database=curd;user=admin@123@springboot-server;password=pass@word1;encrypt=true;trustServerCertificate=false;loginTimeout=30
+    url: jdbc:mysql://database-1.ccpyumk8ujb8.us-east-1.rds.amazonaws.com:3306/curd
+    username: root
+    password: ponnu.sree1
 
   jpa:
-    database-platform: org.hibernate.dialect.SQLServerDialect
+#    database-platform: org.hibernate.dialect.SQLServerDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
